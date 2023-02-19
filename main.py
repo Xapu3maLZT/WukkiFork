@@ -1,6 +1,7 @@
 import json
 import disnake
 from disnake.ext import commands
+from colorama import Fore, Style
 
 with open('settings.json') as f:
     settings = json.load(f)
@@ -8,6 +9,12 @@ with open('settings.json') as f:
 bot = commands.Bot(command_prefix=(".",), intents=disnake.Intents.all())
 
 for extension in settings["cogs"]:
-    bot.load_extension(extension)
+    try:
+        bot.load_extension(extension)
+        print(f"{Fore.GREEN}[INFO] Loaded extension: {extension}{Style.RESET_ALL}")
+    except Exception as e:
+        print(f"{Fore.RED}[ERROR] Failed to load extension: {extension}. Reason: {e}{Style.RESET_ALL}")
+
+print(f"{Fore.GREEN}[INFO] Bot is now online{Style.RESET_ALL}")
 
 bot.run(settings["token"])
