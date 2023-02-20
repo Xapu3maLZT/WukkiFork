@@ -10,7 +10,7 @@ class BotProfile(commands.Cog):
 
     @tasks.loop(hours=1)
     async def status_change(self):
-            await self.bot.change_presence(status=disnake.Status.dnd, activity=disnake.Activity(name="Hilimiko", type=disnake.ActivityType.playing))
+            await self.bot.change_presence(status=disnake.Status.dnd, activity=disnake.Activity(name="Hodwini", type=disnake.ActivityType.playing))
 
     @status_change.before_loop
     async def before_status_change(self):

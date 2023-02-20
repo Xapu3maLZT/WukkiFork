@@ -1,3 +1,5 @@
+import os
+os.system('color')
 import json
 import disnake
 from disnake.ext import commands
