@@ -2,3 +2,5 @@ settings.json
 cogs/__pycache__/bot_profile.cpython-310.pyc
 cogs/__pycache__/moderation.cpython-310.pyc
 cogs/__pycache__/voice_private.cpython-310.pyc
+cogs/__pycache__/ticket.cpython-310.pyc
+cogs/__pycache__
