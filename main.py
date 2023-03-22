@@ -18,5 +18,4 @@ for extension in settings["cogs"]:
         print(f"{Fore.RED}[ERROR] Failed to load extension: {extension}. Reason: {e}{Style.RESET_ALL}")
 
 print(f"{Fore.GREEN}[INFO] Bot is now online{Style.RESET_ALL}")
-
 bot.run(settings["token"])
