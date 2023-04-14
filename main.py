@@ -1,9 +1,10 @@
 import os
-os.system('color')
 import json
 import disnake
 from disnake.ext import commands
 from colorama import Fore, Style
+
+os.system('color')
 
 with open('settings.json') as f:
     settings = json.load(f)
