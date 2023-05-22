@@ -1,8 +1,32 @@
 # WukkiBot
 
 Это Discord-бот для проекта «Hodwini», на библиотеке [DisnakeAPI](https://disnake.dev/).
-<br>Он имеет систему экономики, уровней, магазина, а также полная интеграция между группой Вконтакте, Telegram-ботом/каналом и Minecraft-сервером.
+<br>Система модерации, уровней, экономике, синхронизация веб-сайта и Minecraft-сервера, и многое другое.
 
+___
+## Структура бота
+
+```
+Wukki/
+├── cogs/
+│   ├── admin/
+│   │   ├── admin_broadcast.py
+│   │   ├── admin_moderation.py
+│   │   └── admin_utils.py
+│   ├── ecosystem/
+│   │   ├── telegram_synch.py
+│   │   └── website_synch.py
+│   ├── user/
+│   │   └── profile.py
+│   ├── utils/
+│   │   ├── bot_profile.py
+│   │   └── voice_system.py
+│   └── __init.py__
+├── .gitignore
+├── main.py
+├── config.json
+└── README.md
+```
 ___
 ## Команды
 
@@ -12,7 +36,7 @@ ___
 - `/sell` - открывает модальное окно, для продажи предмета.
 - `/balance` - отображает баланс.
 - `/auth` - синхронизирует Minecraft-аккаунт с Discord-сервером.
-- `/broadcast` - откроет модальное окно, для создания объявления .
+- `/broadcast` - откроет модальное окно, для создания объявления.
 
 > И ещё несколько других команд, весь список можно получить введя команду `/help`.
 ___
